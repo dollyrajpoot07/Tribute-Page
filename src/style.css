@@ -1,0 +1,151 @@
+html {
+  font-size: 10px;
+  block-size: 100%;
+  inline-size: 100%;
+}
+
+pre {
+  font-weight: bolder;
+  text-align: center;
+  font-family: cursive;
+  font-size: 29px;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Helvetica Neue", Arial, sans-serif;
+  font-size: 1.8rem;
+  line-height: 1.5;
+  text-align: center;
+  color: rgb(6, 0, 0);
+  margin: 100;
+  background: url("https://i.insider.com/5caf7c366100be306e75caf7?width=1000&format=jpeg&auto=webp");
+  background-repeat: repeat;
+  margin-top: 50px;
+  min-block-size: 100%;
+  min-inline-size: 100%;
+  box-sizing: border-box;
+  display: grid;
+  place-content: center;
+}
+@media (orientation: landscape) {
+  body {
+    grid-auto-flow: column;
+  }
+}
+
+h1 {
+  font-size: 5rem;
+  position: relative;
+  margin-bottom: 10;
+  color: red;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+h1::before {
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  inset: 0 0 0 0;
+  background: hsl(200 100% 80%);
+  z-index: -1;
+  transition: transform 0.3s ease;
+}
+h1:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+@media (max-width: 460px) {
+  h1 {
+    font-size: 3.5rem;
+    line-height: 1.2;
+  }
+}
+
+h2 {
+  font-size: 3.25rem;
+}
+
+h3 {
+  font-size: 1.3em;
+  font-style: initial;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+a {
+  color: #008cff;
+}
+a:visited {
+  color: #ff0000;
+}
+
+#main {
+  margin: 50px 80px;
+  padding: 50px;
+  border-radius: 25px;
+  background: rgba(186, 231, 255, 0.8);
+  box-shadow: 0.25em 0.25em 2em rgb(255, 0, 0);
+}
+@media (max-width: 460px) {
+  #main {
+    margin: 0;
+  }
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 20px;
+  box-shadow: 0.25em 0.25em 3em rgb(0, 0, 0);
+}
+#img-div {
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0.25em 0.25em 3em rgb(0, 0, 0);
+  padding: 75px;
+  margin: 120;
+  border-radius: 20px;
+}
+#img-caption {
+  margin: 15px 0 5px 0;
+}
+@media (max-width: 460px) {
+  #img-caption {
+    font-size: 1.4rem;
+  }
+}
+
+#headline {
+  margin: 50px 0;
+  text-align: center;
+}
+
+ul {
+  max-width: 100%;
+  margin: 0 auto 50px auto;
+  text-align: left;
+  line-height: 1.8;
+}
+li {
+  margin: 10px 0;
+  font-family: cursive;
+  font-size: 1.2em;
+}
+
+blockquote {
+  font-style: italic;
+  margin: 0 auto 50px auto;
+  text-align: left;
+  font-weight: bolder;
+}
+strong {
+  font-family: fantasy;
+  font-weight: bolder;
+  color: rgb(255, 0, 0);
+}
